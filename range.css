@@ -38,7 +38,7 @@
 }
 
 .range::-webkit-slider-thumb:hover {
-    background: hsl(174, 65%, 41%);
+    background: #24aea1;
     background-image: url(./images/icon-slider.svg);
     background-size: 60%;
     background-repeat: no-repeat;
