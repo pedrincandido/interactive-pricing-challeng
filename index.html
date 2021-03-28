@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link href="./reset.css" type="text/css" rel="stylesheet">
+    <link href="./range.css" type="text/css" rel="stylesheet">
+    <link href="./switch.css" type="text/css" rel="stylesheet">
+    <link href="./card.css" type="text/css" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container__content">
+        <div class="header mt-4 mb-4">
+          <span class="header__title">Simple, traffic-based pricing</span>
+          <span class="header__subtitle">
+            <span>Sign-up for our 30-day trial.</span>
+            <span>No credit card required.</span>
+          </span>
+        </div>
+
+        <div class="card">
+          <div class="card__container">
+            <div class="card__title">
+              <span class="card__title--blue"></span>
+              <span class="card__money">
+                <span class="card__money--highlight" id="money"></span>
+                <span class="card__money--bold">/ month</span>
+              </span>
+
+              <div class="card__traffic mt-2">
+                <input class="range" type="range" min="0" value="2" max="4" step="1" />
+              </div>
+            </div>
+
+            <div class="card__informations">
+              <div class="card__billing mt-2">
+                <span class="card__billing--small"> Monthly Billing</span>
+
+                <div class="switch__container">
+                  <input id="switch-shadow" class="switch switch--shadow" type="checkbox" onclick="activeDiscount()">
+                  <label for="switch-shadow"></label>
+                </div>
+                <span class="card__billing--small">Yearly Billing</span>
+                <div class="card__rectangle">
+                  <span class="card__rectangle--discount card__rectangle--orange">25% discount</span>
+                  <span class="card__rectangle--percent card__rectangle--orange">-25%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="card__footer">
+            <div class="card__actions">
+              <span>Unlimited websites</span>
+              <span>100% data ownership</span>
+              <span>Email reports</span>
+            </div>
+
+            <div class="card__button">
+              <button> Start my trial</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="./script.js"></script>
+  </body>
+
+</html>

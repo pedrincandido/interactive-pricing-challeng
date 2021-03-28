@@ -1,0 +1,203 @@
+.card {
+    background-color: var(--white);
+    width: 540px;
+    height: 397px;
+    box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+    border-radius: 8px;
+}
+
+.card__container {
+    padding: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "informations";
+}
+
+.card__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-area: title;
+}
+
+.card__title--blue {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+}
+
+.card__infomartions {
+    display: grid;
+    flex-direction: column;
+    grid-area: informations;
+}
+
+.card__money {
+    display: flex;
+    align-items: center;
+}
+
+.card__money--highlight {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 55px;
+    letter-spacing: -1px;
+}
+
+.card__money--bold {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--grayish-blue);
+    margin-left: 10px;
+}
+
+.card__billing {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.card__billing > div,
+span {
+    margin-left: 10px;
+}
+
+.card__billing--small {
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--grayish-blue);
+    line-height: 16.39px;
+}
+
+.card__traffic {
+    width: 100%;
+}
+
+.card__rectangle {
+    width: 80px;
+    height: 19px;
+    text-align: center;
+    background: var(--light-grayish-red);
+    border-radius: 9.5px;
+}
+
+.card__rectangle--percent {
+    display: none;
+}
+
+.card__rectangle--orange {
+    margin-left: 0;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--light-red);
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.card__actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__actions span {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-top: 10px;
+    color: var(--grayish-blue);
+}
+
+.card__actions span::before {
+    content: url(./images/icon-check.svg);
+    padding-right: 15px;
+}
+
+.card__button {
+    display: flex;
+    align-items: center;
+}
+
+.card__button button {
+    width: 170px;
+    height: 41px;
+    border-radius: 20px;
+    background-color: var(--dark-desaturated-blue);
+    border-color: var(--dark-desaturated-blue);
+    color: var(--pale-blue);
+    font-weight: 800;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+
+.card__button button:hover {
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 327px;
+        height: 478px !important;
+    }
+
+    .card__title {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .card__money {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: "money month";
+        order: 2;
+        margin-top: 2.5rem;
+    }
+
+    .card__money--highlight {
+        grid-area: money;
+    }
+
+    .card__money--bold {
+        grid-area: month;
+    }
+
+    .card__footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .card__button {
+        padding-top: 20px;
+    }
+
+    .card__billing {
+        padding-right: 0;
+    }
+
+    .card__rectangle {
+        width: auto;
+    }
+
+    .card__rectangle--discount {
+        display: none;
+    }
+}
